@@ -1,1 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Microcontroller Projects</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+	
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+			<style type="text/css">@import url('https://themes.googleusercontent.com/fonts/css?kit=vTbT7urhBWoQfR2Ssl4_0CmRZpIX9SNBjLkdcpGW6dk');ol.lst-kix_d2osgwlb34j-0.start{counter-reset:lst-ctn-kix_d2osgwlb34j-0 0}.lst-kix_4cf8ifld1n0-3>li{counter-increment:lst-ctn-kix_4cf8ifld1n0-3}ol.lst-kix_go543pjxuj1o-6.start{counter-reset:lst-ctn-kix_go543pjxuj1o-6 0}ol.lst-kix_cwtf9c5b2nmx-0.start{counter-reset:lst-ctn-kix_cwtf9c5b2nmx-0 0}.lst-kix_go543pjxuj1o-5>li{counter-increment:lst-ctn-kix_go543pjxuj1o-5}.lst-kix_d2osgwlb34j-3>li{counter-increment:lst-ctn-kix_d2osgwlb34j-3}ol.lst-kix_4cf8ifld1n0-5.start{counter-reset:lst-ctn-kix_4cf8ifld1n0-5 0}ol.lst-kix_mcjq82v7b32i-6.start{counter-reset:lst-ctn-kix_mcjq82v7b32i-6 0}.lst-kix_5eto85t752cc-2>li{counter-increment:lst-ctn-kix_5eto85t752cc-2}.lst-kix_ese7ubzhu00f-3>li{counter-increment:lst-ctn-kix_ese7ubzhu00f-3}.lst-kix_bhxzkz5nwfg-7>li:before{content:"" counter(lst-ctn-kix_bhxzkz5nwfg-7,lower-latin) ". "}.lst-kix_bhxzkz5nwfg-8>li:before{content:"" counter(lst-ctn-kix_bhxzkz5nwfg-8,lower-roman) ". "}ol.lst-kix_isdjhggzt2wa-5.start{counter-reset:lst-ctn-kix_isdjhggzt2wa-5 0}ol.lst-kix_bhxzkz5nwfg-2.start{counter-reset:lst-ctn-kix_bhxzkz5nwfg-2 0}ol.lst-kix_ese7ubzhu00f-5.start{counter-reset:lst-ctn-kix_ese7ubzhu00f-5 0}ol.lst-kix_cwtf9c5b2nmx-2{list-style-type:none}ol.lst-kix_mcjq82v7b32i-3{list-style-type:none}.lst-kix_d2osgwlb34j-4>li:before{content:"" counter(lst-ctn-kix_d2osgwlb34j-4,lower-latin) ". "}ol.lst-kix_h5l6c871j8fw-7.start{counter-reset:lst-ctn-kix_h5l6c871j8fw-7 0}ol.lst-kix_cwtf9c5b2nmx-1{list-style-type:none}ol.lst-kix_mcjq82v7b32i-4{list-style-type:none}ol.lst-kix_cwtf9c5b2nmx-0{list-style-type:none}ol.lst-kix_mcjq82v7b32i-5{list-style-type:none}.lst-kix_d2osgwlb34j-3>li:before{content:"" counter(lst-ctn-kix_d2osgwlb34j-3,decimal) ". "}ol.lst-kix_mcjq82v7b32i-6{list-style-type:none}ol.lst-kix_4cf8ifld1n0-0.start{counter-reset:lst-ctn-kix_4cf8ifld1n0-0 0}.lst-kix_d2osgwlb34j-2>li:before{content:"" counter(lst-ctn-kix_d2osgwlb34j-2,lower-roman) ". "}ol.lst-kix_mcjq82v7b32i-0{list-style-type:none}ol.lst-kix_iihnki31s2gg-2.start{counter-reset:lst-ctn-kix_iihnki31s2gg-2 0}ol.lst-kix_mcjq82v7b32i-1{list-style-type:none}ol.lst-kix_mcjq82v7b32i-2{list-style-type:none}.lst-kix_d2osgwlb34j-0>li:before{content:"" counter(lst-ctn-kix_d2osgwlb34j-0,decimal) ". "}.lst-kix_d2osgwlb34j-1>li:before{content:"" counter(lst-ctn-kix_d2osgwlb34j-1,lower-latin) ". "}.lst-kix_iihnki31s2gg-1>li{counter-increment:lst-ctn-kix_iihnki31s2gg-1}.lst-kix_mcjq82v7b32i-8>li{counter-increment:lst-ctn-kix_mcjq82v7b32i-8}.lst-kix_ese7ubzhu00f-7>li{counter-increment:lst-ctn-kix_ese7ubzhu00f-7}ol.lst-kix_d2osgwlb34j-5.start{counter-reset:lst-ctn-kix_d2osgwlb34j-5 0}ol.lst-kix_mcjq82v7b32i-1.start{counter-reset:lst-ctn-kix_mcjq82v7b32i-1 0}.lst-kix_iihnki31s2gg-8>li{counter-increment:lst-ctn-kix_iihnki31s2gg-8}ol.lst-kix_5eto85t752cc-4.start{counter-reset:lst-ctn-kix_5eto85t752cc-4 0}.lst-kix_4cf8ifld1n0-7>li{counter-increment:lst-ctn-kix_4cf8ifld1n0-7}.lst-kix_bhxzkz5nwfg-3>li:before{content:"" counter(lst-ctn-kix_bhxzkz5nwfg-3,decimal) ". "}.lst-kix_bhxzkz5nwfg-2>li:before{content:"" counter(lst-ctn-kix_bhxzkz5nwfg-2,lower-roman) ". "}.lst-kix_bhxzkz5nwfg-6>li:before{content:"" counter(lst-ctn-kix_bhxzkz5nwfg-6,decimal) ". "}ol.lst-kix_isdjhggzt2wa-0.start{counter-reset:lst-ctn-kix_isdjhggzt2wa-0 0}.lst-kix_bhxzkz5nwfg-5>li:before{content:"" counter(lst-ctn-kix_bhxzkz5nwfg-5,lower-roman) ". "}.lst-kix_bhxzkz5nwfg-4>li:before{content:"" counter(lst-ctn-kix_bhxzkz5nwfg-4,lower-latin) ". "}ol.lst-kix_ese7ubzhu00f-0.start{counter-reset:lst-ctn-kix_ese7ubzhu00f-0 0}ol.lst-kix_cwtf9c5b2nmx-7.start{counter-reset:lst-ctn-kix_cwtf9c5b2nmx-7 0}.lst-kix_bhxzkz5nwfg-1>li:before{content:"" counter(lst-ctn-kix_bhxzkz5nwfg-1,lower-latin) ". "}.lst-kix_bhxzkz5nwfg-0>li:before{content:"" counter(lst-ctn-kix_bhxzkz5nwfg-0,decimal) ". "}.lst-kix_cwtf9c5b2nmx-5>li{counter-increment:lst-ctn-kix_cwtf9c5b2nmx-5}ol.lst-kix_5eto85t752cc-6.start{counter-reset:lst-ctn-kix_5eto85t752cc-6 0}.lst-kix_go543pjxuj1o-6>li:before{content:"" counter(lst-ctn-kix_go543pjxuj1o-6,decimal) ". "}.lst-kix_go543pjxuj1o-8>li:before{content:"" counter(lst-ctn-kix_go543pjxuj1o-8,lower-roman) ". "}ol.lst-kix_d2osgwlb34j-7.start{counter-reset:lst-ctn-kix_d2osgwlb34j-7 0}.lst-kix_go543pjxuj1o-4>li:before{content:"" counter(lst-ctn-kix_go543pjxuj1o-4,lower-latin) ". "}.lst-kix_go543pjxuj1o-0>li:before{content:"" counter(lst-ctn-kix_go543pjxuj1o-0,decimal) ". "}.lst-kix_go543pjxuj1o-2>li:before{content:"" counter(lst-ctn-kix_go543pjxuj1o-2,lower-roman) ". "}.lst-kix_go543pjxuj1o-1>li{counter-increment:lst-ctn-kix_go543pjxuj1o-1}.lst-kix_bhxzkz5nwfg-1>li{counter-increment:lst-ctn-kix_bhxzkz5nwfg-1}ol.lst-kix_cwtf9c5b2nmx-2.start{counter-reset:lst-ctn-kix_cwtf9c5b2nmx-2 0}.lst-kix_iihnki31s2gg-4>li{counter-increment:lst-ctn-kix_iihnki31s2gg-4}ol.lst-kix_go543pjxuj1o-1.start{counter-reset:lst-ctn-kix_go543pjxuj1o-1 0}.lst-kix_cwtf9c5b2nmx-3>li:before{content:"" counter(lst-ctn-kix_cwtf9c5b2nmx-3,decimal) ". "}ol.lst-kix_cwtf9c5b2nmx-5.start{counter-reset:lst-ctn-kix_cwtf9c5b2nmx-5 0}ol.lst-kix_4cf8ifld1n0-3.start{counter-reset:lst-ctn-kix_4cf8ifld1n0-3 0}.lst-kix_4cf8ifld1n0-6>li{counter-increment:lst-ctn-kix_4cf8ifld1n0-6}.lst-kix_cwtf9c5b2nmx-1>li:before{content:"" counter(lst-ctn-kix_cwtf9c5b2nmx-1,lower-latin) ". "}.lst-kix_cwtf9c5b2nmx-5>li:before{content:"" counter(lst-ctn-kix_cwtf9c5b2nmx-5,lower-roman) ". "}.lst-kix_h5l6c871j8fw-6>li{counter-increment:lst-ctn-kix_h5l6c871j8fw-6}.lst-kix_7y3g8d1mtrpk-5>li{counter-increment:lst-ctn-kix_7y3g8d1mtrpk-5}.lst-kix_d2osgwlb34j-6>li:before{content:"" counter(lst-ctn-kix_d2osgwlb34j-6,decimal) ". "}.lst-kix_aazibvmhcs62-6>li:before{content:"\0025cf  "}.lst-kix_4cf8ifld1n0-0>li{counter-increment:lst-ctn-kix_4cf8ifld1n0-0}.lst-kix_ese7ubzhu00f-0>li{counter-increment:lst-ctn-kix_ese7ubzhu00f-0}.lst-kix_isdjhggzt2wa-6>li{counter-increment:lst-ctn-kix_isdjhggzt2wa-6}.lst-kix_aazibvmhcs62-8>li:before{content:"\0025a0  "}ol.lst-kix_bhxzkz5nwfg-0.start{counter-reset:lst-ctn-kix_bhxzkz5nwfg-0 0}ol.lst-kix_h5l6c871j8fw-0{list-style-type:none}.lst-kix_d2osgwlb34j-8>li:before{content:"" counter(lst-ctn-kix_d2osgwlb34j-8,lower-roman) ". "}ol.lst-kix_h5l6c871j8fw-1{list-style-type:none}ol.lst-kix_h5l6c871j8fw-2{list-style-type:none}ol.lst-kix_h5l6c871j8fw-3{list-style-type:none}ol.lst-kix_h5l6c871j8fw-4{list-style-type:none}ol.lst-kix_h5l6c871j8fw-5{list-style-type:none}ol.lst-kix_h5l6c871j8fw-6{list-style-type:none}ol.lst-kix_mcjq82v7b32i-4.start{counter-reset:lst-ctn-kix_mcjq82v7b32i-4 0}ol.lst-kix_h5l6c871j8fw-7{list-style-type:none}ol.lst-kix_h5l6c871j8fw-8{list-style-type:none}.lst-kix_ese7ubzhu00f-6>li{counter-increment:lst-ctn-kix_ese7ubzhu00f-6}.lst-kix_mcjq82v7b32i-4>li{counter-increment:lst-ctn-kix_mcjq82v7b32i-4}.lst-kix_cwtf9c5b2nmx-6>li{counter-increment:lst-ctn-kix_cwtf9c5b2nmx-6}.lst-kix_mcjq82v7b32i-0>li:before{content:"" counter(lst-ctn-kix_mcjq82v7b32i-0,decimal) ". "}.lst-kix_aazibvmhcs62-4>li:before{content:"\0025cb  "}ol.lst-kix_iihnki31s2gg-7.start{counter-reset:lst-ctn-kix_iihnki31s2gg-7 0}.lst-kix_aazibvmhcs62-2>li:before{content:"\0025a0  "}.lst-kix_cwtf9c5b2nmx-7>li:before{content:"" counter(lst-ctn-kix_cwtf9c5b2nmx-7,lower-latin) ". "}.lst-kix_bhxzkz5nwfg-2>li{counter-increment:lst-ctn-kix_bhxzkz5nwfg-2}.lst-kix_d2osgwlb34j-7>li{counter-increment:lst-ctn-kix_d2osgwlb34j-7}ol.lst-kix_ese7ubzhu00f-3.start{counter-reset:lst-ctn-kix_ese7ubzhu00f-3 0}.lst-kix_aazibvmhcs62-0>li:before{content:"\0025cf  "}.lst-kix_iihnki31s2gg-3>li:before{content:"" counter(lst-ctn-kix_iihnki31s2gg-3,decimal) ". "}.lst-kix_7y3g8d1mtrpk-8>li:before{content:"" counter(lst-ctn-kix_7y3g8d1mtrpk-8,lower-roman) ". "}.lst-kix_bhxzkz5nwfg-8>li{counter-increment:lst-ctn-kix_bhxzkz5nwfg-8}.lst-kix_mcjq82v7b32i-7>li:before{content:"" counter(lst-ctn-kix_mcjq82v7b32i-7,lower-latin) ". "}.lst-kix_mcjq82v7b32i-5>li{counter-increment:lst-ctn-kix_mcjq82v7b32i-5}.lst-kix_mcjq82v7b32i-6>li:before{content:"" counter(lst-ctn-kix_mcjq82v7b32i-6,decimal) ". "}ol.lst-kix_go543pjxuj1o-3.start{counter-reset:lst-ctn-kix_go543pjxuj1o-3 0}.lst-kix_iihnki31s2gg-4>li:before{content:"" counter(lst-ctn-kix_iihnki31s2gg-4,lower-latin) ". "}.lst-kix_7y3g8d1mtrpk-5>li:before{content:"" counter(lst-ctn-kix_7y3g8d1mtrpk-5,lower-roman) ". "}.lst-kix_mcjq82v7b32i-2>li:before{content:"" counter(lst-ctn-kix_mcjq82v7b32i-2,lower-roman) ". "}ol.lst-kix_d2osgwlb34j-3.start{counter-reset:lst-ctn-kix_d2osgwlb34j-3 0}ol.lst-kix_isdjhggzt2wa-2.start{counter-reset:lst-ctn-kix_isdjhggzt2wa-2 0}.lst-kix_mcjq82v7b32i-3>li:before{content:"" counter(lst-ctn-kix_mcjq82v7b32i-3,decimal) ". "}.lst-kix_7y3g8d1mtrpk-8>li{counter-increment:lst-ctn-kix_7y3g8d1mtrpk-8}ol.lst-kix_bhxzkz5nwfg-5.start{counter-reset:lst-ctn-kix_bhxzkz5nwfg-5 0}ol.lst-kix_4cf8ifld1n0-2.start{counter-reset:lst-ctn-kix_4cf8ifld1n0-2 0}.lst-kix_iihnki31s2gg-0>li:before{content:"" counter(lst-ctn-kix_iihnki31s2gg-0,decimal) ". "}ol.lst-kix_h5l6c871j8fw-4.start{counter-reset:lst-ctn-kix_h5l6c871j8fw-4 0}ol.lst-kix_iihnki31s2gg-8{list-style-type:none}ol.lst-kix_iihnki31s2gg-7{list-style-type:none}ol.lst-kix_iihnki31s2gg-6{list-style-type:none}ol.lst-kix_ese7ubzhu00f-2.start{counter-reset:lst-ctn-kix_ese7ubzhu00f-2 0}ul.lst-kix_tizcz6s9u2a0-2{list-style-type:none}ul.lst-kix_tizcz6s9u2a0-1{list-style-type:none}ul.lst-kix_tizcz6s9u2a0-4{list-style-type:none}ul.lst-kix_tizcz6s9u2a0-3{list-style-type:none}ul.lst-kix_tizcz6s9u2a0-0{list-style-type:none}ol.lst-kix_isdjhggzt2wa-8.start{counter-reset:lst-ctn-kix_isdjhggzt2wa-8 0}.lst-kix_7y3g8d1mtrpk-0>li:before{content:"" counter(lst-ctn-kix_7y3g8d1mtrpk-0,decimal) ". "}.lst-kix_7y3g8d1mtrpk-4>li:before{content:"" counter(lst-ctn-kix_7y3g8d1mtrpk-4,lower-latin) ". "}ul.lst-kix_tizcz6s9u2a0-6{list-style-type:none}ul.lst-kix_tizcz6s9u2a0-5{list-style-type:none}ul.lst-kix_tizcz6s9u2a0-8{list-style-type:none}ul.lst-kix_tizcz6s9u2a0-7{list-style-type:none}.lst-kix_iihnki31s2gg-7>li:before{content:"" counter(lst-ctn-kix_iihnki31s2gg-7,lower-latin) ". "}.lst-kix_iihnki31s2gg-8>li:before{content:"" counter(lst-ctn-kix_iihnki31s2gg-8,lower-roman) ". "}.lst-kix_7y3g8d1mtrpk-1>li:before{content:"" counter(lst-ctn-kix_7y3g8d1mtrpk-1,lower-latin) ". "}.lst-kix_isdjhggzt2wa-7>li{counter-increment:lst-ctn-kix_isdjhggzt2wa-7}.lst-kix_d2osgwlb34j-0>li{counter-increment:lst-ctn-kix_d2osgwlb34j-0}ol.lst-kix_h5l6c871j8fw-5.start{counter-reset:lst-ctn-kix_h5l6c871j8fw-5 0}.lst-kix_go543pjxuj1o-8>li{counter-increment:lst-ctn-kix_go543pjxuj1o-8}ol.lst-kix_ese7ubzhu00f-1.start{counter-reset:lst-ctn-kix_ese7ubzhu00f-1 0}.lst-kix_bhxzkz5nwfg-6>li{counter-increment:lst-ctn-kix_bhxzkz5nwfg-6}ol.lst-kix_go543pjxuj1o-4.start{counter-reset:lst-ctn-kix_go543pjxuj1o-4 0}ol.lst-kix_cwtf9c5b2nmx-8.start{counter-reset:lst-ctn-kix_cwtf9c5b2nmx-8 0}ol.lst-kix_isdjhggzt2wa-7.start{counter-reset:lst-ctn-kix_isdjhggzt2wa-7 0}ol.lst-kix_mcjq82v7b32i-8.start{counter-reset:lst-ctn-kix_mcjq82v7b32i-8 0}ol.lst-kix_iihnki31s2gg-1{list-style-type:none}ol.lst-kix_iihnki31s2gg-0{list-style-type:none}.lst-kix_5eto85t752cc-5>li{counter-increment:lst-ctn-kix_5eto85t752cc-5}ol.lst-kix_iihnki31s2gg-5{list-style-type:none}ol.lst-kix_iihnki31s2gg-4{list-style-type:none}ol.lst-kix_iihnki31s2gg-3{list-style-type:none}ol.lst-kix_iihnki31s2gg-2{list-style-type:none}ol.lst-kix_4cf8ifld1n0-2{list-style-type:none}ol.lst-kix_4cf8ifld1n0-3{list-style-type:none}ol.lst-kix_4cf8ifld1n0-4{list-style-type:none}ol.lst-kix_4cf8ifld1n0-5{list-style-type:none}ol.lst-kix_4cf8ifld1n0-0{list-style-type:none}ol.lst-kix_4cf8ifld1n0-1{list-style-type:none}ol.lst-kix_4cf8ifld1n0-6{list-style-type:none}ol.lst-kix_4cf8ifld1n0-7{list-style-type:none}ol.lst-kix_4cf8ifld1n0-8{list-style-type:none}ol.lst-kix_d2osgwlb34j-4.start{counter-reset:lst-ctn-kix_d2osgwlb34j-4 0}ol.lst-kix_bhxzkz5nwfg-4.start{counter-reset:lst-ctn-kix_bhxzkz5nwfg-4 0}.lst-kix_7y3g8d1mtrpk-6>li{counter-increment:lst-ctn-kix_7y3g8d1mtrpk-6}.lst-kix_isdjhggzt2wa-4>li{counter-increment:lst-ctn-kix_isdjhggzt2wa-4}ol.lst-kix_h5l6c871j8fw-3.start{counter-reset:lst-ctn-kix_h5l6c871j8fw-3 0}.lst-kix_go543pjxuj1o-7>li:before{content:"" counter(lst-ctn-kix_go543pjxuj1o-7,lower-latin) ". "}ol.lst-kix_4cf8ifld1n0-1.start{counter-reset:lst-ctn-kix_4cf8ifld1n0-1 0}ol.lst-kix_h5l6c871j8fw-0.start{counter-reset:lst-ctn-kix_h5l6c871j8fw-0 0}.lst-kix_g8ztml5nlwz-8>li:before{content:"\0025a0  "}.lst-kix_mcjq82v7b32i-0>li{counter-increment:lst-ctn-kix_mcjq82v7b32i-0}.lst-kix_go543pjxuj1o-3>li:before{content:"" counter(lst-ctn-kix_go543pjxuj1o-3,decimal) ". "}.lst-kix_7y3g8d1mtrpk-1>li{counter-increment:lst-ctn-kix_7y3g8d1mtrpk-1}.lst-kix_g8ztml5nlwz-4>li:before{content:"\0025cb  "}.lst-kix_ese7ubzhu00f-0>li:before{content:"" counter(lst-ctn-kix_ese7ubzhu00f-0,decimal) ". "}.lst-kix_tizcz6s9u2a0-3>li:before{content:"\0025cf  "}ol.lst-kix_isdjhggzt2wa-0{list-style-type:none}ol.lst-kix_isdjhggzt2wa-3{list-style-type:none}ol.lst-kix_isdjhggzt2wa-4{list-style-type:none}ol.lst-kix_isdjhggzt2wa-1{list-style-type:none}ol.lst-kix_isdjhggzt2wa-2{list-style-type:none}ol.lst-kix_isdjhggzt2wa-7{list-style-type:none}ol.lst-kix_isdjhggzt2wa-8{list-style-type:none}.lst-kix_5eto85t752cc-7>li{counter-increment:lst-ctn-kix_5eto85t752cc-7}ol.lst-kix_isdjhggzt2wa-5{list-style-type:none}.lst-kix_bhxzkz5nwfg-4>li{counter-increment:lst-ctn-kix_bhxzkz5nwfg-4}ol.lst-kix_isdjhggzt2wa-6{list-style-type:none}.lst-kix_g8ztml5nlwz-0>li:before{content:"\0025cf  "}.lst-kix_ese7ubzhu00f-4>li:before{content:"" counter(lst-ctn-kix_ese7ubzhu00f-4,lower-latin) ". "}.lst-kix_isdjhggzt2wa-2>li{counter-increment:lst-ctn-kix_isdjhggzt2wa-2}.lst-kix_h5l6c871j8fw-3>li{counter-increment:lst-ctn-kix_h5l6c871j8fw-3}ol.lst-kix_bhxzkz5nwfg-6.start{counter-reset:lst-ctn-kix_bhxzkz5nwfg-6 0}.lst-kix_4cf8ifld1n0-8>li{counter-increment:lst-ctn-kix_4cf8ifld1n0-8}ol.lst-kix_isdjhggzt2wa-1.start{counter-reset:lst-ctn-kix_isdjhggzt2wa-1 0}ol.lst-kix_go543pjxuj1o-5.start{counter-reset:lst-ctn-kix_go543pjxuj1o-5 0}.lst-kix_ese7ubzhu00f-8>li{counter-increment:lst-ctn-kix_ese7ubzhu00f-8}.lst-kix_ese7ubzhu00f-8>li:before{content:"" counter(lst-ctn-kix_ese7ubzhu00f-8,lower-roman) ". "}.lst-kix_cwtf9c5b2nmx-2>li{counter-increment:lst-ctn-kix_cwtf9c5b2nmx-2}.lst-kix_cwtf9c5b2nmx-4>li:before{content:"" counter(lst-ctn-kix_cwtf9c5b2nmx-4,lower-latin) ". "}ol.lst-kix_go543pjxuj1o-8.start{counter-reset:lst-ctn-kix_go543pjxuj1o-8 0}.lst-kix_h5l6c871j8fw-6>li:before{content:"" counter(lst-ctn-kix_h5l6c871j8fw-6,decimal) ". "}ol.lst-kix_cwtf9c5b2nmx-8{list-style-type:none}ol.lst-kix_d2osgwlb34j-2.start{counter-reset:lst-ctn-kix_d2osgwlb34j-2 0}.lst-kix_go543pjxuj1o-3>li{counter-increment:lst-ctn-kix_go543pjxuj1o-3}ol.lst-kix_cwtf9c5b2nmx-7{list-style-type:none}ol.lst-kix_cwtf9c5b2nmx-6{list-style-type:none}ol.lst-kix_mcjq82v7b32i-7{list-style-type:none}ol.lst-kix_cwtf9c5b2nmx-5{list-style-type:none}ol.lst-kix_mcjq82v7b32i-8{list-style-type:none}ol.lst-kix_isdjhggzt2wa-4.start{counter-reset:lst-ctn-kix_isdjhggzt2wa-4 0}ol.lst-kix_cwtf9c5b2nmx-4{list-style-type:none}ol.lst-kix_cwtf9c5b2nmx-3{list-style-type:none}.lst-kix_h5l6c871j8fw-2>li:before{content:"" counter(lst-ctn-kix_h5l6c871j8fw-2,lower-roman) ". "}ol.lst-kix_h5l6c871j8fw-1.start{counter-reset:lst-ctn-kix_h5l6c871j8fw-1 0}.lst-kix_cwtf9c5b2nmx-0>li:before{content:"" counter(lst-ctn-kix_cwtf9c5b2nmx-0,decimal) ". "}.lst-kix_d2osgwlb34j-7>li:before{content:"" counter(lst-ctn-kix_d2osgwlb34j-7,lower-latin) ". "}ol.lst-kix_bhxzkz5nwfg-8{list-style-type:none}ol.lst-kix_bhxzkz5nwfg-7{list-style-type:none}ol.lst-kix_bhxzkz5nwfg-4{list-style-type:none}ol.lst-kix_bhxzkz5nwfg-3{list-style-type:none}ol.lst-kix_bhxzkz5nwfg-6{list-style-type:none}ol.lst-kix_bhxzkz5nwfg-5{list-style-type:none}.lst-kix_iihnki31s2gg-6>li{counter-increment:lst-ctn-kix_iihnki31s2gg-6}ol.lst-kix_bhxzkz5nwfg-0{list-style-type:none}.lst-kix_mcjq82v7b32i-7>li{counter-increment:lst-ctn-kix_mcjq82v7b32i-7}ol.lst-kix_bhxzkz5nwfg-2{list-style-type:none}ol.lst-kix_isdjhggzt2wa-3.start{counter-reset:lst-ctn-kix_isdjhggzt2wa-3 0}ol.lst-kix_bhxzkz5nwfg-1{list-style-type:none}ol.lst-kix_d2osgwlb34j-1.start{counter-reset:lst-ctn-kix_d2osgwlb34j-1 0}.lst-kix_aazibvmhcs62-5>li:before{content:"\0025a0  "}ol.lst-kix_go543pjxuj1o-7.start{counter-reset:lst-ctn-kix_go543pjxuj1o-7 0}ol.lst-kix_bhxzkz5nwfg-7.start{counter-reset:lst-ctn-kix_bhxzkz5nwfg-7 0}.lst-kix_cwtf9c5b2nmx-8>li:before{content:"" counter(lst-ctn-kix_cwtf9c5b2nmx-8,lower-roman) ". "}.lst-kix_aazibvmhcs62-1>li:before{content:"\0025cb  "}ol.lst-kix_h5l6c871j8fw-2.start{counter-reset:lst-ctn-kix_h5l6c871j8fw-2 0}.lst-kix_5eto85t752cc-0>li{counter-increment:lst-ctn-kix_5eto85t752cc-0}.lst-kix_7y3g8d1mtrpk-7>li{counter-increment:lst-ctn-kix_7y3g8d1mtrpk-7}ol.lst-kix_mcjq82v7b32i-0.start{counter-reset:lst-ctn-kix_mcjq82v7b32i-0 0}.lst-kix_mcjq82v7b32i-6>li{counter-increment:lst-ctn-kix_mcjq82v7b32i-6}ol.lst-kix_bhxzkz5nwfg-8.start{counter-reset:lst-ctn-kix_bhxzkz5nwfg-8 0}ol.lst-kix_7y3g8d1mtrpk-5.start{counter-reset:lst-ctn-kix_7y3g8d1mtrpk-5 0}.lst-kix_cwtf9c5b2nmx-0>li{counter-increment:lst-ctn-kix_cwtf9c5b2nmx-0}.lst-kix_bhxzkz5nwfg-7>li{counter-increment:lst-ctn-kix_bhxzkz5nwfg-7}.lst-kix_h5l6c871j8fw-8>li{counter-increment:lst-ctn-kix_h5l6c871j8fw-8}ol.lst-kix_cwtf9c5b2nmx-6.start{counter-reset:lst-ctn-kix_cwtf9c5b2nmx-6 0}ol.lst-kix_d2osgwlb34j-6.start{counter-reset:lst-ctn-kix_d2osgwlb34j-6 0}.lst-kix_5eto85t752cc-4>li{counter-increment:lst-ctn-kix_5eto85t752cc-4}.lst-kix_ese7ubzhu00f-5>li{counter-increment:lst-ctn-kix_ese7ubzhu00f-5}.lst-kix_isdjhggzt2wa-8>li{counter-increment:lst-ctn-kix_isdjhggzt2wa-8}.lst-kix_4cf8ifld1n0-5>li{counter-increment:lst-ctn-kix_4cf8ifld1n0-5}ul.lst-kix_aazibvmhcs62-8{list-style-type:none}ul.lst-kix_aazibvmhcs62-7{list-style-type:none}.lst-kix_isdjhggzt2wa-1>li{counter-increment:lst-ctn-kix_isdjhggzt2wa-1}ul.lst-kix_g8ztml5nlwz-6{list-style-type:none}ol.lst-kix_bhxzkz5nwfg-3.start{counter-reset:lst-ctn-kix_bhxzkz5nwfg-3 0}.lst-kix_mcjq82v7b32i-2>li{counter-increment:lst-ctn-kix_mcjq82v7b32i-2}.lst-kix_4cf8ifld1n0-1>li:before{content:"" counter(lst-ctn-kix_4cf8ifld1n0-1,lower-latin) ". "}ul.lst-kix_g8ztml5nlwz-5{list-style-type:none}ul.lst-kix_g8ztml5nlwz-8{list-style-type:none}ul.lst-kix_g8ztml5nlwz-7{list-style-type:none}ul.lst-kix_g8ztml5nlwz-2{list-style-type:none}ul.lst-kix_g8ztml5nlwz-1{list-style-type:none}.lst-kix_ese7ubzhu00f-1>li{counter-increment:lst-ctn-kix_ese7ubzhu00f-1}.lst-kix_h5l6c871j8fw-1>li{counter-increment:lst-ctn-kix_h5l6c871j8fw-1}ul.lst-kix_g8ztml5nlwz-4{list-style-type:none}ul.lst-kix_g8ztml5nlwz-3{list-style-type:none}.lst-kix_4cf8ifld1n0-0>li:before{content:"" counter(lst-ctn-kix_4cf8ifld1n0-0,decimal) ". "}ul.lst-kix_g8ztml5nlwz-0{list-style-type:none}.lst-kix_4cf8ifld1n0-6>li:before{content:"" counter(lst-ctn-kix_4cf8ifld1n0-6,decimal) ". "}.lst-kix_4cf8ifld1n0-7>li:before{content:"" counter(lst-ctn-kix_4cf8ifld1n0-7,lower-latin) ". "}.lst-kix_bhxzkz5nwfg-0>li{counter-increment:lst-ctn-kix_bhxzkz5nwfg-0}.lst-kix_isdjhggzt2wa-6>li:before{content:"" counter(lst-ctn-kix_isdjhggzt2wa-6,decimal) ". "}.lst-kix_cwtf9c5b2nmx-7>li{counter-increment:lst-ctn-kix_cwtf9c5b2nmx-7}ol.lst-kix_5eto85t752cc-8{list-style-type:none}.lst-kix_isdjhggzt2wa-7>li:before{content:"" counter(lst-ctn-kix_isdjhggzt2wa-7,lower-latin) ". "}ol.lst-kix_7y3g8d1mtrpk-0.start{counter-reset:lst-ctn-kix_7y3g8d1mtrpk-0 0}.lst-kix_4cf8ifld1n0-5>li:before{content:"" counter(lst-ctn-kix_4cf8ifld1n0-5,lower-roman) ". "}ol.lst-kix_5eto85t752cc-7{list-style-type:none}ul.lst-kix_aazibvmhcs62-2{list-style-type:none}.lst-kix_d2osgwlb34j-5>li{counter-increment:lst-ctn-kix_d2osgwlb34j-5}ol.lst-kix_5eto85t752cc-4{list-style-type:none}ul.lst-kix_aazibvmhcs62-1{list-style-type:none}.lst-kix_4cf8ifld1n0-2>li:before{content:"" counter(lst-ctn-kix_4cf8ifld1n0-2,lower-roman) ". "}.lst-kix_4cf8ifld1n0-3>li:before{content:"" counter(lst-ctn-kix_4cf8ifld1n0-3,decimal) ". "}ol.lst-kix_5eto85t752cc-3{list-style-type:none}ul.lst-kix_aazibvmhcs62-0{list-style-type:none}ol.lst-kix_5eto85t752cc-6{list-style-type:none}.lst-kix_isdjhggzt2wa-8>li:before{content:"" counter(lst-ctn-kix_isdjhggzt2wa-8,lower-roman) ". "}ol.lst-kix_5eto85t752cc-5{list-style-type:none}ul.lst-kix_aazibvmhcs62-6{list-style-type:none}ol.lst-kix_5eto85t752cc-0{list-style-type:none}ul.lst-kix_aazibvmhcs62-5{list-style-type:none}.lst-kix_4cf8ifld1n0-4>li:before{content:"" counter(lst-ctn-kix_4cf8ifld1n0-4,lower-latin) ". "}ul.lst-kix_aazibvmhcs62-4{list-style-type:none}ol.lst-kix_5eto85t752cc-2{list-style-type:none}ul.lst-kix_aazibvmhcs62-3{list-style-type:none}ol.lst-kix_5eto85t752cc-1{list-style-type:none}ol.lst-kix_7y3g8d1mtrpk-4{list-style-type:none}ol.lst-kix_7y3g8d1mtrpk-5{list-style-type:none}ol.lst-kix_7y3g8d1mtrpk-6{list-style-type:none}ol.lst-kix_7y3g8d1mtrpk-7{list-style-type:none}.lst-kix_tizcz6s9u2a0-4>li:before{content:"\0025cb  "}ol.lst-kix_7y3g8d1mtrpk-0{list-style-type:none}.lst-kix_7y3g8d1mtrpk-0>li{counter-increment:lst-ctn-kix_7y3g8d1mtrpk-0}ol.lst-kix_7y3g8d1mtrpk-1{list-style-type:none}ol.lst-kix_7y3g8d1mtrpk-2{list-style-type:none}ol.lst-kix_7y3g8d1mtrpk-3{list-style-type:none}.lst-kix_tizcz6s9u2a0-5>li:before{content:"\0025a0  "}ol.lst-kix_5eto85t752cc-5.start{counter-reset:lst-ctn-kix_5eto85t752cc-5 0}.lst-kix_5eto85t752cc-7>li:before{content:"" counter(lst-ctn-kix_5eto85t752cc-7,lower-latin) ". "}.lst-kix_tizcz6s9u2a0-6>li:before{content:"\0025cf  "}.lst-kix_tizcz6s9u2a0-8>li:before{content:"\0025a0  "}ol.lst-kix_7y3g8d1mtrpk-8{list-style-type:none}ol.lst-kix_cwtf9c5b2nmx-1.start{counter-reset:lst-ctn-kix_cwtf9c5b2nmx-1 0}.lst-kix_5eto85t752cc-6>li:before{content:"" counter(lst-ctn-kix_5eto85t752cc-6,decimal) ". "}.lst-kix_cwtf9c5b2nmx-4>li{counter-increment:lst-ctn-kix_cwtf9c5b2nmx-4}.lst-kix_4cf8ifld1n0-8>li:before{content:"" counter(lst-ctn-kix_4cf8ifld1n0-8,lower-roman) ". "}.lst-kix_tizcz6s9u2a0-7>li:before{content:"\0025cb  "}.lst-kix_5eto85t752cc-4>li:before{content:"" counter(lst-ctn-kix_5eto85t752cc-4,lower-latin) ". "}.lst-kix_isdjhggzt2wa-5>li:before{content:"" counter(lst-ctn-kix_isdjhggzt2wa-5,lower-roman) ". "}.lst-kix_4cf8ifld1n0-1>li{counter-increment:lst-ctn-kix_4cf8ifld1n0-1}.lst-kix_5eto85t752cc-3>li:before{content:"" counter(lst-ctn-kix_5eto85t752cc-3,decimal) ". "}.lst-kix_5eto85t752cc-5>li:before{content:"" counter(lst-ctn-kix_5eto85t752cc-5,lower-roman) ". "}.lst-kix_isdjhggzt2wa-4>li:before{content:"" counter(lst-ctn-kix_isdjhggzt2wa-4,lower-latin) ". "}ol.lst-kix_mcjq82v7b32i-7.start{counter-reset:lst-ctn-kix_mcjq82v7b32i-7 0}.lst-kix_isdjhggzt2wa-3>li:before{content:"" counter(lst-ctn-kix_isdjhggzt2wa-3,decimal) ". "}.lst-kix_5eto85t752cc-0>li:before{content:"" counter(lst-ctn-kix_5eto85t752cc-0,decimal) ". "}.lst-kix_isdjhggzt2wa-1>li:before{content:"" counter(lst-ctn-kix_isdjhggzt2wa-1,lower-latin) ". "}.lst-kix_5eto85t752cc-1>li:before{content:"" counter(lst-ctn-kix_5eto85t752cc-1,lower-latin) ". "}.lst-kix_isdjhggzt2wa-0>li:before{content:"" counter(lst-ctn-kix_isdjhggzt2wa-0,decimal) ". "}.lst-kix_isdjhggzt2wa-2>li:before{content:"" counter(lst-ctn-kix_isdjhggzt2wa-2,lower-roman) ". "}.lst-kix_7y3g8d1mtrpk-3>li{counter-increment:lst-ctn-kix_7y3g8d1mtrpk-3}.lst-kix_5eto85t752cc-2>li:before{content:"" counter(lst-ctn-kix_5eto85t752cc-2,lower-roman) ". "}ol.lst-kix_isdjhggzt2wa-6.start{counter-reset:lst-ctn-kix_isdjhggzt2wa-6 0}.lst-kix_h5l6c871j8fw-4>li{counter-increment:lst-ctn-kix_h5l6c871j8fw-4}ol.lst-kix_ese7ubzhu00f-6.start{counter-reset:lst-ctn-kix_ese7ubzhu00f-6 0}.lst-kix_go543pjxuj1o-0>li{counter-increment:lst-ctn-kix_go543pjxuj1o-0}.lst-kix_g8ztml5nlwz-7>li:before{content:"\0025cb  "}.lst-kix_ese7ubzhu00f-3>li:before{content:"" counter(lst-ctn-kix_ese7ubzhu00f-3,decimal) ". "}.lst-kix_bhxzkz5nwfg-3>li{counter-increment:lst-ctn-kix_bhxzkz5nwfg-3}.lst-kix_g8ztml5nlwz-3>li:before{content:"\0025cf  "}.lst-kix_ese7ubzhu00f-1>li:before{content:"" counter(lst-ctn-kix_ese7ubzhu00f-1,lower-latin) ". "}ol.lst-kix_h5l6c871j8fw-6.start{counter-reset:lst-ctn-kix_h5l6c871j8fw-6 0}.lst-kix_g8ztml5nlwz-5>li:before{content:"\0025a0  "}.lst-kix_5eto85t752cc-8>li{counter-increment:lst-ctn-kix_5eto85t752cc-8}.lst-kix_h5l6c871j8fw-5>li{counter-increment:lst-ctn-kix_h5l6c871j8fw-5}.lst-kix_tizcz6s9u2a0-2>li:before{content:"\0025a0  "}ol.lst-kix_mcjq82v7b32i-2.start{counter-reset:lst-ctn-kix_mcjq82v7b32i-2 0}.lst-kix_d2osgwlb34j-8>li{counter-increment:lst-ctn-kix_d2osgwlb34j-8}ol.lst-kix_iihnki31s2gg-6.start{counter-reset:lst-ctn-kix_iihnki31s2gg-6 0}.lst-kix_isdjhggzt2wa-5>li{counter-increment:lst-ctn-kix_isdjhggzt2wa-5}.lst-kix_tizcz6s9u2a0-0>li:before{content:"\0025cf  "}ol.lst-kix_go543pjxuj1o-2.start{counter-reset:lst-ctn-kix_go543pjxuj1o-2 0}.lst-kix_g8ztml5nlwz-1>li:before{content:"\0025cb  "}.lst-kix_ese7ubzhu00f-5>li:before{content:"" counter(lst-ctn-kix_ese7ubzhu00f-5,lower-roman) ". "}ol.lst-kix_4cf8ifld1n0-6.start{counter-reset:lst-ctn-kix_4cf8ifld1n0-6 0}.lst-kix_ese7ubzhu00f-7>li:before{content:"" counter(lst-ctn-kix_ese7ubzhu00f-7,lower-latin) ". "}.lst-kix_7y3g8d1mtrpk-4>li{counter-increment:lst-ctn-kix_7y3g8d1mtrpk-4}ol.lst-kix_mcjq82v7b32i-5.start{counter-reset:lst-ctn-kix_mcjq82v7b32i-5 0}.lst-kix_h5l6c871j8fw-5>li:before{content:"" counter(lst-ctn-kix_h5l6c871j8fw-5,lower-roman) ". "}.lst-kix_h5l6c871j8fw-7>li:before{content:"" counter(lst-ctn-kix_h5l6c871j8fw-7,lower-latin) ". "}ol.lst-kix_h5l6c871j8fw-8.start{counter-reset:lst-ctn-kix_h5l6c871j8fw-8 0}.lst-kix_h5l6c871j8fw-1>li:before{content:"" counter(lst-ctn-kix_h5l6c871j8fw-1,lower-latin) ". "}.lst-kix_h5l6c871j8fw-3>li:before{content:"" counter(lst-ctn-kix_h5l6c871j8fw-3,decimal) ". "}ol.lst-kix_ese7ubzhu00f-4.start{counter-reset:lst-ctn-kix_ese7ubzhu00f-4 0}.lst-kix_isdjhggzt2wa-0>li{counter-increment:lst-ctn-kix_isdjhggzt2wa-0}ol.lst-kix_d2osgwlb34j-8.start{counter-reset:lst-ctn-kix_d2osgwlb34j-8 0}ol.lst-kix_5eto85t752cc-7.start{counter-reset:lst-ctn-kix_5eto85t752cc-7 0}ol.lst-kix_iihnki31s2gg-8.start{counter-reset:lst-ctn-kix_iihnki31s2gg-8 0}.lst-kix_go543pjxuj1o-7>li{counter-increment:lst-ctn-kix_go543pjxuj1o-7}.lst-kix_iihnki31s2gg-3>li{counter-increment:lst-ctn-kix_iihnki31s2gg-3}ol.lst-kix_cwtf9c5b2nmx-4.start{counter-reset:lst-ctn-kix_cwtf9c5b2nmx-4 0}ol.lst-kix_4cf8ifld1n0-4.start{counter-reset:lst-ctn-kix_4cf8ifld1n0-4 0}ol.lst-kix_go543pjxuj1o-7{list-style-type:none}.lst-kix_d2osgwlb34j-1>li{counter-increment:lst-ctn-kix_d2osgwlb34j-1}ol.lst-kix_go543pjxuj1o-6{list-style-type:none}ol.lst-kix_go543pjxuj1o-8{list-style-type:none}ol.lst-kix_go543pjxuj1o-3{list-style-type:none}ol.lst-kix_go543pjxuj1o-2{list-style-type:none}ol.lst-kix_go543pjxuj1o-5{list-style-type:none}ol.lst-kix_bhxzkz5nwfg-1.start{counter-reset:lst-ctn-kix_bhxzkz5nwfg-1 0}ol.lst-kix_go543pjxuj1o-4{list-style-type:none}ol.lst-kix_5eto85t752cc-8.start{counter-reset:lst-ctn-kix_5eto85t752cc-8 0}ol.lst-kix_go543pjxuj1o-0.start{counter-reset:lst-ctn-kix_go543pjxuj1o-0 0}.lst-kix_iihnki31s2gg-2>li:before{content:"" counter(lst-ctn-kix_iihnki31s2gg-2,lower-roman) ". "}.lst-kix_5eto85t752cc-3>li{counter-increment:lst-ctn-kix_5eto85t752cc-3}.lst-kix_7y3g8d1mtrpk-7>li:before{content:"" counter(lst-ctn-kix_7y3g8d1mtrpk-7,lower-latin) ". "}.lst-kix_7y3g8d1mtrpk-6>li:before{content:"" counter(lst-ctn-kix_7y3g8d1mtrpk-6,decimal) ". "}.lst-kix_iihnki31s2gg-6>li:before{content:"" counter(lst-ctn-kix_iihnki31s2gg-6,decimal) ". "}ol.lst-kix_go543pjxuj1o-1{list-style-type:none}ol.lst-kix_go543pjxuj1o-0{list-style-type:none}.lst-kix_ese7ubzhu00f-4>li{counter-increment:lst-ctn-kix_ese7ubzhu00f-4}.lst-kix_iihnki31s2gg-5>li:before{content:"" counter(lst-ctn-kix_iihnki31s2gg-5,lower-roman) ". "}.lst-kix_mcjq82v7b32i-8>li:before{content:"" counter(lst-ctn-kix_mcjq82v7b32i-8,lower-roman) ". "}ol.lst-kix_7y3g8d1mtrpk-8.start{counter-reset:lst-ctn-kix_7y3g8d1mtrpk-8 0}.lst-kix_4cf8ifld1n0-4>li{counter-increment:lst-ctn-kix_4cf8ifld1n0-4}.lst-kix_mcjq82v7b32i-1>li:before{content:"" counter(lst-ctn-kix_mcjq82v7b32i-1,lower-latin) ". "}ol.lst-kix_5eto85t752cc-2.start{counter-reset:lst-ctn-kix_5eto85t752cc-2 0}.lst-kix_mcjq82v7b32i-5>li:before{content:"" counter(lst-ctn-kix_mcjq82v7b32i-5,lower-roman) ". "}ol.lst-kix_7y3g8d1mtrpk-2.start{counter-reset:lst-ctn-kix_7y3g8d1mtrpk-2 0}ol.lst-kix_ese7ubzhu00f-7.start{counter-reset:lst-ctn-kix_ese7ubzhu00f-7 0}.lst-kix_mcjq82v7b32i-4>li:before{content:"" counter(lst-ctn-kix_mcjq82v7b32i-4,lower-latin) ". "}.lst-kix_iihnki31s2gg-1>li:before{content:"" counter(lst-ctn-kix_iihnki31s2gg-1,lower-latin) ". "}ol.lst-kix_cwtf9c5b2nmx-3.start{counter-reset:lst-ctn-kix_cwtf9c5b2nmx-3 0}ol.lst-kix_mcjq82v7b32i-3.start{counter-reset:lst-ctn-kix_mcjq82v7b32i-3 0}.lst-kix_d2osgwlb34j-2>li{counter-increment:lst-ctn-kix_d2osgwlb34j-2}.lst-kix_4cf8ifld1n0-2>li{counter-increment:lst-ctn-kix_4cf8ifld1n0-2}.lst-kix_7y3g8d1mtrpk-2>li:before{content:"" counter(lst-ctn-kix_7y3g8d1mtrpk-2,lower-roman) ". "}.lst-kix_ese7ubzhu00f-2>li{counter-increment:lst-ctn-kix_ese7ubzhu00f-2}.lst-kix_h5l6c871j8fw-0>li{counter-increment:lst-ctn-kix_h5l6c871j8fw-0}.lst-kix_7y3g8d1mtrpk-3>li:before{content:"" counter(lst-ctn-kix_7y3g8d1mtrpk-3,decimal) ". "}.lst-kix_go543pjxuj1o-6>li{counter-increment:lst-ctn-kix_go543pjxuj1o-6}.lst-kix_cwtf9c5b2nmx-8>li{counter-increment:lst-ctn-kix_cwtf9c5b2nmx-8}ol.lst-kix_iihnki31s2gg-5.start{counter-reset:lst-ctn-kix_iihnki31s2gg-5 0}ol.lst-kix_d2osgwlb34j-0{list-style-type:none}.lst-kix_d2osgwlb34j-6>li{counter-increment:lst-ctn-kix_d2osgwlb34j-6}ol.lst-kix_d2osgwlb34j-1{list-style-type:none}.lst-kix_mcjq82v7b32i-3>li{counter-increment:lst-ctn-kix_mcjq82v7b32i-3}.lst-kix_5eto85t752cc-1>li{counter-increment:lst-ctn-kix_5eto85t752cc-1}ol.lst-kix_7y3g8d1mtrpk-7.start{counter-reset:lst-ctn-kix_7y3g8d1mtrpk-7 0}.lst-kix_iihnki31s2gg-2>li{counter-increment:lst-ctn-kix_iihnki31s2gg-2}ol.lst-kix_4cf8ifld1n0-7.start{counter-reset:lst-ctn-kix_4cf8ifld1n0-7 0}ol.lst-kix_iihnki31s2gg-4.start{counter-reset:lst-ctn-kix_iihnki31s2gg-4 0}.lst-kix_cwtf9c5b2nmx-1>li{counter-increment:lst-ctn-kix_cwtf9c5b2nmx-1}ol.lst-kix_7y3g8d1mtrpk-1.start{counter-reset:lst-ctn-kix_7y3g8d1mtrpk-1 0}.lst-kix_go543pjxuj1o-2>li{counter-increment:lst-ctn-kix_go543pjxuj1o-2}ol.lst-kix_4cf8ifld1n0-8.start{counter-reset:lst-ctn-kix_4cf8ifld1n0-8 0}.lst-kix_h5l6c871j8fw-7>li{counter-increment:lst-ctn-kix_h5l6c871j8fw-7}.lst-kix_go543pjxuj1o-5>li:before{content:"" counter(lst-ctn-kix_go543pjxuj1o-5,lower-roman) ". "}.lst-kix_iihnki31s2gg-5>li{counter-increment:lst-ctn-kix_iihnki31s2gg-5}.lst-kix_g8ztml5nlwz-6>li:before{content:"\0025cf  "}.lst-kix_ese7ubzhu00f-2>li:before{content:"" counter(lst-ctn-kix_ese7ubzhu00f-2,lower-roman) ". "}ol.lst-kix_iihnki31s2gg-0.start{counter-reset:lst-ctn-kix_iihnki31s2gg-0 0}.lst-kix_5eto85t752cc-8>li:before{content:"" counter(lst-ctn-kix_5eto85t752cc-8,lower-roman) ". "}.lst-kix_isdjhggzt2wa-3>li{counter-increment:lst-ctn-kix_isdjhggzt2wa-3}ol.lst-kix_iihnki31s2gg-3.start{counter-reset:lst-ctn-kix_iihnki31s2gg-3 0}.lst-kix_go543pjxuj1o-1>li:before{content:"" counter(lst-ctn-kix_go543pjxuj1o-1,lower-latin) ". "}ol.lst-kix_5eto85t752cc-0.start{counter-reset:lst-ctn-kix_5eto85t752cc-0 0}.lst-kix_g8ztml5nlwz-2>li:before{content:"\0025a0  "}.lst-kix_tizcz6s9u2a0-1>li:before{content:"\0025cb  "}.lst-kix_7y3g8d1mtrpk-2>li{counter-increment:lst-ctn-kix_7y3g8d1mtrpk-2}ol.lst-kix_d2osgwlb34j-2{list-style-type:none}ol.lst-kix_d2osgwlb34j-3{list-style-type:none}ol.lst-kix_d2osgwlb34j-4{list-style-type:none}ol.lst-kix_d2osgwlb34j-5{list-style-type:none}ol.lst-kix_ese7ubzhu00f-0{list-style-type:none}ol.lst-kix_d2osgwlb34j-6{list-style-type:none}ol.lst-kix_d2osgwlb34j-7{list-style-type:none}ol.lst-kix_ese7ubzhu00f-2{list-style-type:none}ol.lst-kix_d2osgwlb34j-8{list-style-type:none}ol.lst-kix_ese7ubzhu00f-1{list-style-type:none}.lst-kix_ese7ubzhu00f-6>li:before{content:"" counter(lst-ctn-kix_ese7ubzhu00f-6,decimal) ". "}ol.lst-kix_ese7ubzhu00f-4{list-style-type:none}ol.lst-kix_ese7ubzhu00f-3{list-style-type:none}ol.lst-kix_ese7ubzhu00f-6{list-style-type:none}ol.lst-kix_ese7ubzhu00f-5{list-style-type:none}.lst-kix_iihnki31s2gg-7>li{counter-increment:lst-ctn-kix_iihnki31s2gg-7}ol.lst-kix_7y3g8d1mtrpk-6.start{counter-reset:lst-ctn-kix_7y3g8d1mtrpk-6 0}ol.lst-kix_ese7ubzhu00f-8{list-style-type:none}ol.lst-kix_ese7ubzhu00f-7{list-style-type:none}ol.lst-kix_5eto85t752cc-3.start{counter-reset:lst-ctn-kix_5eto85t752cc-3 0}ol.lst-kix_ese7ubzhu00f-8.start{counter-reset:lst-ctn-kix_ese7ubzhu00f-8 0}.lst-kix_5eto85t752cc-6>li{counter-increment:lst-ctn-kix_5eto85t752cc-6}ol.lst-kix_7y3g8d1mtrpk-3.start{counter-reset:lst-ctn-kix_7y3g8d1mtrpk-3 0}.lst-kix_h5l6c871j8fw-8>li:before{content:"" counter(lst-ctn-kix_h5l6c871j8fw-8,lower-roman) ". "}.lst-kix_cwtf9c5b2nmx-2>li:before{content:"" counter(lst-ctn-kix_cwtf9c5b2nmx-2,lower-roman) ". "}.lst-kix_cwtf9c5b2nmx-6>li:before{content:"" counter(lst-ctn-kix_cwtf9c5b2nmx-6,decimal) ". "}ol.lst-kix_5eto85t752cc-1.start{counter-reset:lst-ctn-kix_5eto85t752cc-1 0}.lst-kix_d2osgwlb34j-5>li:before{content:"" counter(lst-ctn-kix_d2osgwlb34j-5,lower-roman) ". "}.lst-kix_h5l6c871j8fw-0>li:before{content:"" counter(lst-ctn-kix_h5l6c871j8fw-0,decimal) ". "}.lst-kix_h5l6c871j8fw-4>li:before{content:"" counter(lst-ctn-kix_h5l6c871j8fw-4,lower-latin) ". "}.lst-kix_cwtf9c5b2nmx-3>li{counter-increment:lst-ctn-kix_cwtf9c5b2nmx-3}.lst-kix_aazibvmhcs62-7>li:before{content:"\0025cb  "}.lst-kix_h5l6c871j8fw-2>li{counter-increment:lst-ctn-kix_h5l6c871j8fw-2}.lst-kix_go543pjxuj1o-4>li{counter-increment:lst-ctn-kix_go543pjxuj1o-4}.lst-kix_iihnki31s2gg-0>li{counter-increment:lst-ctn-kix_iihnki31s2gg-0}ol.lst-kix_7y3g8d1mtrpk-4.start{counter-reset:lst-ctn-kix_7y3g8d1mtrpk-4 0}.lst-kix_mcjq82v7b32i-1>li{counter-increment:lst-ctn-kix_mcjq82v7b32i-1}li.li-bullet-0:before{margin-left:-18pt;white-space:nowrap;display:inline-block;min-width:18pt}.lst-kix_aazibvmhcs62-3>li:before{content:"\0025cf  "}ol.lst-kix_iihnki31s2gg-1.start{counter-reset:lst-ctn-kix_iihnki31s2gg-1 0}.lst-kix_d2osgwlb34j-4>li{counter-increment:lst-ctn-kix_d2osgwlb34j-4}.lst-kix_bhxzkz5nwfg-5>li{counter-increment:lst-ctn-kix_bhxzkz5nwfg-5}ol{margin:0;padding:0}table td,table th{padding:0}.c0{color:#666666;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Droid Serif";font-style:normal}.c2{color:#666666;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Droid Serif";font-style:normal}.c17{color:#b45f06;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Oswald";font-style:normal}.c10{color:#666666;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:13pt;font-family:"Droid Serif";font-style:italic}.c19{color:#b45f06;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:42pt;font-family:"Oswald";font-style:normal}.c21{color:#b45f06;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Oswald";font-style:italic}.c3{margin-left:72pt;padding-top:10pt;padding-left:0pt;padding-bottom:0pt;line-height:1.3;text-align:left}.c4{margin-left:72pt;padding-top:10pt;padding-bottom:0pt;line-height:1.3;text-align:left;height:11pt}.c18{color:#666666;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Oswald";font-style:normal}.c1{margin-left:36pt;padding-top:10pt;padding-left:0pt;padding-bottom:0pt;line-height:1.3;text-align:left}.c6{padding-top:10pt;padding-bottom:0pt;line-height:1.3;text-align:left;height:11pt}.c9{padding-top:6pt;padding-bottom:0pt;line-height:1.3;text-align:center}.c13{padding-top:10pt;padding-bottom:0pt;line-height:1.3;text-align:left}.c15{padding-top:10pt;padding-bottom:0pt;line-height:1.0;text-align:center}.c7{text-decoration-skip-ink:none;-webkit-text-decoration-skip:none;color:#1155cc;text-decoration:underline}.c11{padding-top:0pt;padding-bottom:0pt;line-height:1.3;text-align:left}.c8{padding-top:24pt;padding-bottom:0pt;line-height:1.3;text-align:left}.c16{background-color:#ffffff;max-width:468pt;padding:72pt 72pt 72pt 72pt}.c20{color:inherit;text-decoration:inherit}.c5{padding:0;margin:0}.c12{font-weight:700}.c14{margin-left:36pt}.title{padding-top:10pt;color:#b45f06;font-size:42pt;padding-bottom:0pt;font-family:"Oswald";line-height:1.0;text-align:center}.subtitle{padding-top:6pt;color:#666666;font-size:13pt;padding-bottom:0pt;font-family:"Droid Serif";line-height:1.3;font-style:italic;text-align:center}li{color:#666666;font-size:11pt;font-family:"Droid Serif"}p{margin:0;color:#666666;font-size:11pt;font-family:"Droid Serif"}h1{padding-top:24pt;color:#b45f06;font-size:14pt;padding-bottom:0pt;font-family:"Oswald";line-height:1.3;text-align:left}h2{padding-top:10pt;color:#783f04;font-size:11pt;padding-bottom:0pt;font-family:"Oswald";line-height:1.0;text-align:left}h3{padding-top:10pt;color:#783f04;font-weight:700;font-size:18pt;padding-bottom:0pt;font-family:"Droid Serif";line-height:1.0;text-align:center}h4{padding-top:6pt;color:#666666;font-size:11pt;padding-bottom:0pt;font-family:"Oswald";line-height:1.3;text-align:center}h5{padding-top:8pt;color:#666666;font-size:11pt;padding-bottom:0pt;font-family:"Trebuchet MS";line-height:1.3;page-break-after:avoid;text-align:left}h6{padding-top:8pt;color:#666666;font-size:11pt;padding-bottom:0pt;font-family:"Trebuchet MS";line-height:1.3;page-break-after:avoid;font-style:italic;text-align:left}</style>
+		
+
+  <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+  <meta property="og:title" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+
+  <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Imperial - v3.1.0
+  * Template URL: https://bootstrapmade.com/imperial-free-onepage-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body >
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container d-flex align-items-center">
+
+      <a href="index.html" class="logo mr-auto"></a>
+      <!-- Uncomment below if you prefer to use a text logo -->
+      <!-- <h1 class="logo mr-auto"><a href="index.html">Imperial</a></h1> -->
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#services">Funshops</a></li>
+          
+          <li><a href="index.html#contact">Contact</a></li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Microcontroller Projects</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Lego Projects</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page">
+      <div class="container">
+        <p>
+          <ul>
+                     
+            <p class="c15 title" id="h.nj23sjpj5u97">
+				<span>Introduction to Lego Programming using WeDo 2.0</span>
+			</p>
+			
+			
+			<h1 class="c8" id="h.yspy8tt3f0xe">
+				<span>Lesson Plan</span>
+			</h1>
+			<ul class="c5 lst-kix_aazibvmhcs62-0 start">
+				<li class="c1 li-bullet-0">
+					<span class="c12">Week 1</span>
+					<span class="c2">&nbsp;- Demo on WeDo 2.0</span>
+				</li>
+				<li class="c1 li-bullet-0">
+					<span class="c12">Week 2</span>
+					<span class="c2">&nbsp;- Introduction to Lego </span>
+				</li>
+			</ul>
+			<ul class="c5 lst-kix_aazibvmhcs62-1 start">
+				<li class="c3 li-bullet-0">
+					<span class="c2">What are they? </span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c2">Different types of Lego Kits , capabilities, differences etc</span>
+				</li>
+			</ul>
+			<ul class="c5 lst-kix_aazibvmhcs62-0">
+				<li class="c1 li-bullet-0">
+					<span class="c12">Week 3</span>
+					<span>&nbsp;- </span>
+					<span class="c0">WeDo 2.0 blocks Introduction</span>
+				</li>
+			</ul>
+			<ul class="c5 lst-kix_aazibvmhcs62-1 start">
+				<li class="c3 li-bullet-0">
+					<span class="c2">Smarthub - What is it? It's purpose and use</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c2">Adding Blocks to Coding Area</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c2">Deleting Blocks</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c2">Duplicating Blocks</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c2">Displaying Text</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c2">Displaying Numbers</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c2">Creating Icons and Images</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c2">Image Offset</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c2">Creating and using Variables</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c2">Introduction to Counters</span>
+				</li>
+			</ul>
+			<ul class="c5 lst-kix_aazibvmhcs62-0">
+				<li class="c1 li-bullet-0">
+					<span class="c12">Week 4</span>
+					<span>&nbsp;-</span>
+					<span class="c0">&nbsp;Project with Counters</span>
+				</li>
+			</ul>
+			<ul class="c5 lst-kix_aazibvmhcs62-1 start">
+				<li class="c3 li-bullet-0">
+					<span class="c2">Using buttons</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c2">Voting Machine</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c2">Timers using Counters</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c2">Applications of Counters</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c2">Introduction to Strings and Arrays</span>
+				</li>
+			</ul>
+			
+			<ul class="c5 lst-kix_aazibvmhcs62-0">
+				<li class="c1 li-bullet-0">
+					<span class="c12">Week 5</span>
+					<span>&nbsp;- </span>
+					<span class="c0">Introduction to Sensors</span>
+				</li>
+			</ul>
+			<ul class="c5 lst-kix_aazibvmhcs62-1 start">
+				<li class="c3 li-bullet-0">
+					<span class="c2">Using Light Sensor</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c2">Using Accelerometer</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c2">Using Gestures</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c2">Using Compass</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c2">Using Temperature Sensors</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c2">Using Logo press</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c2">Quick introduction to Serial communication</span>
+				</li>
+			</ul>
+			<ul class="c5 lst-kix_aazibvmhcs62-0">
+				<li class="c1 li-bullet-0">
+					<span class="c12">Week 6</span>
+					<span>&nbsp;-</span>
+					<span class="c0">&nbsp;Beginner projects</span>
+				</li>
+			</ul>
+			<ul class="c5 lst-kix_aazibvmhcs62-1 start">
+				<li class="c3 li-bullet-0">
+					<span class="c2">Displaying Text</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c2">Foot step counter</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c2">Making a night lamp</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c2">Making it Sound</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c2">Making a light meter</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c2">Making a love meter</span>
+				</li>
+			</ul>
+			<ul class="c5 lst-kix_aazibvmhcs62-0">
+				<li class="c1 li-bullet-0">
+					<span class="c12">Week 7</span>
+					<span>&nbsp;- </span>
+					<span class="c0">Beginner projects</span>
+				</li>
+			</ul>
+			<ul class="c5 lst-kix_aazibvmhcs62-1 start">
+				<li class="c3 li-bullet-0">
+					<span class="c2">Banana, Orange music maker</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c2">Microbit with Scratch - This opens up unlimited project ideas</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c2">Radio communication</span>
+				</li>
+			</ul>
+			<ul class="c5 lst-kix_aazibvmhcs62-0">
+				<li class="c1 li-bullet-0">
+					<span class="c12">Week 8</span>
+					<span>&nbsp;-</span>
+					<span class="c0">&nbsp;Using Serial communication</span>
+				</li>
+			</ul>
+			<ul class="c5 lst-kix_aazibvmhcs62-1 start">
+				<li class="c3 li-bullet-0">
+					<span class="c2">Using serial write</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c2">Data collection</span>
+				</li>
+			</ul>
+			<ul class="c5 lst-kix_aazibvmhcs62-0">
+				<li class="c1 li-bullet-0">
+					<span class="c12">Week 9</span>
+					<span>&nbsp;-</span>
+					<span class="c0">&nbsp;Creating Sprites</span>
+				</li>
+			</ul>
+			<ul class="c5 lst-kix_aazibvmhcs62-1 start">
+				<li class="c3 li-bullet-0">
+					<span class="c2">Making games with Sprites</span>
+				</li>
+			</ul>
+			<ul class="c5 lst-kix_aazibvmhcs62-0">
+				<li class="c1 li-bullet-0">
+					<span class="c12">Week 10</span>
+					<span>&nbsp;-</span>
+					<span class="c0">&nbsp;Project Ideas</span>
+				</li>
+			</ul>
+			<ul class="c5 lst-kix_aazibvmhcs62-1 start">
+				<li class="c3 li-bullet-0">
+					<span class="c0">Cookie Jar protector</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c0">Alarm</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c0">Password lock</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c0">Distance calculator</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c0">Soil Moisture detector</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c0">Conductivity Detector</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c0">Speed Calculator</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c0">COVID - Face touch indicator</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c0">Bowling speed indicator</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c0">Lane departure detector</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c0">Keyboard keys manipulator</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c0">Connect Microbit with Scratch</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c0">Coach special</span>
+				</li>
+			</ul>
+			<ul class="c5 lst-kix_aazibvmhcs62-0">
+				<li class="c1 li-bullet-0">
+					<span class="c0">Week 11 - Advanced Topics</span>
+				</li>
+			</ul>
+			<ul class="c5 lst-kix_aazibvmhcs62-1 start">
+				<li class="c3 li-bullet-0">
+					<span class="c0">Connecting different sensors</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c0">Servos</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c0">Ultrasonic sensor</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c0">LEDs</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c0">Pushbuttons</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c0">Relays</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c0">LCD Displays</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c0">Humidity and temperature sensors</span>
+				</li>
+				<li class="c3 li-bullet-0">
+					<span class="c0">How different microcontrollers, Raspberry pi, and Arduino all fit together</span>
+				</li>
+			</ul>
+			<p class="c4">
+				<span class="c0"/>
+			</p>
+			<h1 class="c8" id="h.2mcvygr6kyjq">
+				<span>Learning Objectives</span>
+			</h1>
+			<ol class="c5 lst-kix_h5l6c871j8fw-0 start" start="1">
+				<li class="c1 li-bullet-0">
+					<span class="c2">Introduce learning mindset in students</span>
+				</li>
+				<li class="c1 li-bullet-0">
+					<span class="c2">Enable students to learn and explore on their own</span>
+				</li>
+				<li class="c1 li-bullet-0">
+					<span class="c2">Encourage students to communicate, share, and present their work</span>
+				</li>
+				<li class="c1 li-bullet-0">
+					<span class="c2">Harbor team building</span>
+				</li>
+				<li class="c1 li-bullet-0">
+					<span class="c2">Value and reward curiosity</span>
+				</li>
+			</ol>
+			<p class="c6 c14">
+				<span class="c2"/>
+			</p>
+			<h1 class="c8" id="h.kpsgsnhcj8ts">
+				<span>Materials Needed</span>
+			</h1>
+			<ol class="c5 lst-kix_iihnki31s2gg-0 start" start="1">
+				<li class="c1 li-bullet-0">
+					<span class="c2">BBC microbit V2</span>
+				</li>
+				<li class="c1 li-bullet-0">
+					<span class="c2">JST battery connector</span>
+				</li>
+				<li class="c1 li-bullet-0">
+					<span class="c2">Micro USB Data cable</span>
+				</li>
+				<li class="c1 li-bullet-0">
+					<span class="c2">Few LEDs, Resistors - as needed</span>
+				</li>
+				<li class="c1 li-bullet-0">
+					<span class="c2">Servo motor - as needed</span>
+				</li>
+				<li class="c1 li-bullet-0">
+					<span class="c2">Other interfacing hardware - as needed</span>
+				</li>
+			</ol>
+			<h1 class="c8" id="h.ybxw3flop3dy">
+				<span>Show and Tell</span>
+			</h1>
+			<ol class="c5 lst-kix_cwtf9c5b2nmx-0 start" start="1">
+				<li class="c1 li-bullet-0">
+					<span class="c2">Demonstrate our learning and progress to friends and family</span>
+				</li>
+			</ol>
+			<p class="c6">
+				<span class="c2"/>
+			</p>
+		  <h1 class="c8" id="h.kpsgsnhcj8ts">
+				<span>Example Projects - Making a Tomato and Orange controlled LEGO Rover using Makey Makey</span>
+			</h1>
+		  <ul class="c5 lst-kix_cwtf9c5b2nmx-0 start" >
+		  	  
+           <div class="embed-responsive embed-responsive-16by9">
+           <iframe  class="embed-responsive-item" src="https://www.youtube.com/embed/uorFu4i8DeM"  allowfullscreen></iframe>
+            </div>
+            
+           
+		  </ul>
+		  
+			<div>
+				<h4 class="c13" id="h.37o5xb65948r">
+					<span>&nbsp; </span>
+				</h4>
+			</div>
+            
+            
+            
+        </ul>
+        </p>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="copyright">
+            &copy; Copyright <strong>Imperial Theme</strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            <!--
+            All the links in the footer should remain intact.
+            You can delete the links only if you purchased the pro version.
+            Licensing information: https://bootstrapmade.com/license/
+            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Imperial
+          -->
+            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
+
 
